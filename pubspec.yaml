@@ -1,0 +1,128 @@
+name: operator_controller
+description: Operators to use for VR-Room.
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.0.0-dev.68.0 <3.0.0"
+  flutter: "< 1.5.9"
+
+dependencies:
+  typed_data: '^1.1.6'
+  flutter:
+    sdk: flutter
+  reflectable: ^2.0.10+1
+  json_serializable: ^3.0.0
+  json_annotation: ^2.4.0
+  cupertino_icons: ^0.1.2
+  mqtt_client: 5.5.3
+  flutter_svg: "^0.11.0"
+  fluro: "^1.4.0"
+  path_provider: ^1.1.0
+  shared_preferences: ^0.4.3
+  flame: 0.13.1
+  sliding_up_panel: ^1.0.2
+  flutter_native_splash: ^0.1.9
+  flutter_launcher_icons: "^0.7.3"
+  image_picker: ^0.6.0+8
+  image_crop: ^0.2.1
+  cached_network_image: ^1.0.0
+  image_gallery_saver: ^1.2.2
+  dio: ^1.0.13
+
+dev_dependencies:
+  build_runner: any
+  flutter_test:
+    sdk: flutter
+
+flutter_native_splash:
+  image: assets/Illustration.png
+  color: "000000"
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icon_iqiyivr_1024.png"
+
+flutter:
+  uses-material-design: true
+
+  fonts:
+  - family: PingFang
+    fonts:
+    - asset: assets/fonts/PingFang Regular.ttf
+
+  assets:
+  - assets/images/yum.png
+  - assets/images/gun.png
+  - assets/images/headmount.png
+  - assets/images/gamebg.png
+  - assets/images/assets/bg1.png
+  - assets/images/assets/bg0.png
+  - assets/images/assets/btn_bg1.png
+  - assets/images/assets/btn_men_normal.png
+  - assets/images/assets/btn_men_selected.png
+  - assets/images/assets/btn_process_normal.png
+  - assets/images/assets/btn_process_selected.png
+  - assets/images/assets/btn_refresh.png
+  - assets/images/assets/btn_return.png
+  - assets/images/assets/btn_set.png
+  - assets/images/assets/btn_state_normal.png
+  - assets/images/assets/btn_state_selected.png
+  - assets/images/assets/btn_testing_normal.png
+  - assets/images/assets/btn_testing_selected.png
+  - assets/images/assets/btn_women_normal.png
+  - assets/images/assets/btn_women_selected.png
+  - assets/images/assets/game_icon1.png
+  - assets/images/assets/game_icon11.png
+  - assets/images/assets/game_icon2.png
+  - assets/images/assets/game_icon21.png
+  - assets/images/assets/game_icon3.png
+  - assets/images/assets/game_icon31.png
+  - assets/images/assets/icon_equipment_door.png
+  - assets/images/assets/icon_equipment_door1.png
+  - assets/images/assets/icon_equipment_door_fault.png
+  - assets/images/assets/icon_equipment_door_fault1.png
+  - assets/images/assets/icon_equipment_elevator1.png
+  - assets/images/assets/icon_equipment_elevator_fault.png
+  - assets/images/assets/icon_equipment_elevator_fault1.png
+  - assets/images/assets/icon_equipment_fan.png
+  - assets/images/assets/icon_equipment_fan1.png
+  - assets/images/assets/icon_equipment_fan_fault.png
+  - assets/images/assets/icon_equipment_fan_fault1.png
+  - assets/images/assets/icon_equipment_server.png
+  - assets/images/assets/icon_equipment_server1.png
+  - assets/images/assets/icon_equipment_server_fault.png
+  - assets/images/assets/icon_equipment_server_fault1.png
+  - assets/images/assets/icon_equipment_sound.png
+  - assets/images/assets/icon_equipment_sound1.png
+  - assets/images/assets/icon_equipment_sound_fault.png
+  - assets/images/assets/icon_equipment_sound_fault1.png
+  - assets/images/assets/icon_equipment_spray.png
+  - assets/images/assets/icon_equipment_spray1.png
+  - assets/images/assets/icon_equipment_spray_fault.png
+  - assets/images/assets/icon_equipment_spray_fault1.png
+  - assets/images/assets/icon_error.png
+  - assets/images/assets/icon_map_normal.png
+  - assets/images/assets/icon_map_selected.png
+  - assets/images/assets/icon_offline.png
+  - assets/images/assets/icon_online.png
+  - assets/images/assets/icon_pc.png
+  - assets/images/assets/icon_plus.png
+  - assets/images/assets/icon_reduce.png
+  - assets/images/assets/icon_right.png
+  - assets/images/assets/icon_up.png
+  - assets/images/assets/icon_warning.png
+  - assets/images/assets/Illustration.png
+  - assets/images/assets/loading.png
+  - assets/images/assets/map.png
+  - assets/images/assets/multiple_selection_normal.png
+  - assets/images/assets/multiple_selection_selected.png
+  - assets/images/assets/player1.png
+  - assets/images/assets/player2.png
+  - assets/images/assets/single_election_normal.png
+  - assets/images/assets/single_election_selected.png
+  - assets/images/assets/state_function.png
+  - assets/images/assets/state_ready.png
+  - assets/images/assets/switch_close.png
+  - assets/images/assets/switch_open.png
+
