@@ -56,7 +56,7 @@ matrix:
           packages:
             - libstdc++6
       before_script:
-        - wget http://services.gradle.org/distributions/gradle-4.10.2-all.zip
+        - wget https://services.gradle.org/distributions/gradle-4.10.2-all.zip
         - unzip -qq gradle-4.10.2-all.zip
         - export GRADLE_HOME=$PWD/gradle-4.10.2
         - export PATH=$GRADLE_HOME/bin:$PATH
