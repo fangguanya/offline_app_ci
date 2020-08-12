@@ -4,7 +4,6 @@ version: 1.0.0+1
 
 environment:
   sdk: ">=2.0.0-dev.68.0 <3.0.0"
-  flutter: "< 1.5.9"
 
 dependencies:
   typed_data: '^1.1.6'
@@ -14,19 +13,19 @@ dependencies:
   json_serializable: ^3.0.0
   json_annotation: ^2.4.0
   cupertino_icons: ^0.1.2
-  mqtt_client: 5.5.3
-  flutter_svg: "^0.11.0"
+  mqtt_client: 7.3.0
+  flutter_svg: 0.18.0
   fluro: "^1.4.0"
   path_provider: ^1.1.0
   shared_preferences: ^0.4.3
-  flame: 0.13.1
+  flame: 0.24.0
   sliding_up_panel: ^1.0.2
   flutter_native_splash: ^0.1.9
   flutter_launcher_icons: "^0.7.3"
-  image_picker: ^0.6.0+8
-  image_crop: ^0.2.1
-  cached_network_image: ^1.0.0
-  image_gallery_saver: ^1.2.2
+  image_picker: ^0.6.7+4
+  image_crop: 0.3.2
+  cached_network_image: ^2.2.0+1
+  image_gallery_saver: ^1.5.0
   dio: ^1.0.13
 
 dev_dependencies:

@@ -23,6 +23,8 @@ import 'models/core/event_bus.dart';
 import 'panel/battle/widget.dart';
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
   // 初始化全局变量
   initializeReflectable();
   final connection = Connection();
@@ -324,7 +326,7 @@ class MyAppState extends State<MyApp> with WidgetsBindingObserver {
         Application.hardwareYDL.sendMessage('RegistIp');
         Application.hardwareYDL.sendMessage('GetHardwareOnline');
         break;
-      case AppLifecycleState.suspending:
+      case AppLifecycleState.detached:
         print('AppLifecycleState.suspending');
         Application.dataCenter.setForeground(false);
         break;

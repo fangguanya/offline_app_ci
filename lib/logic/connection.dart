@@ -3,6 +3,7 @@ import 'dart:convert'; // JSON库
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:mqtt_client/mqtt_client.dart' as mqtt;
+import 'package:mqtt_client/mqtt_server_client.dart' as mqttsvr;
 import 'package:operator_controller/models/config_data.dart';
 import 'package:operator_controller/models/core/event_bus.dart';
 import 'package:operator_controller/models/device/rotator.dart';
@@ -126,8 +127,7 @@ class Connection {
       port = 1883;
     }
 
-    client = mqtt.MqttClient(broker, '');
-    client.port = port;
+    client = mqttsvr.MqttServerClient.withPort(broker, '', port);
     client.logging(on: false);
     client.keepAlivePeriod = 30;
     client.onDisconnected = _onDisconnected;
