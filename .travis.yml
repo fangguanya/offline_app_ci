@@ -21,7 +21,6 @@ matrix:
             - ubuntu-toolchain-r-test # if we don't specify this, the libstdc++6 we get is the wrong version
           packages:
             - libstdc++6
-            - fonts-droid
       before_script:
         - git clone https://github.com/flutter/flutter.git -b alpha --depth 1
       script:
@@ -54,7 +53,6 @@ matrix:
             - ubuntu-toolchain-r-test # if we don't specify this, the libstdc++6 we get is the wrong version
           packages:
             - libstdc++6
-            - fonts-droid
       before_script:
         - wget http://services.gradle.org/distributions/gradle-4.10.2-all.zip
         - unzip -qq gradle-4.10.2-all.zip
