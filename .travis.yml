@@ -15,21 +15,17 @@ matrix:
     - env: JOB=APK
       os: linux
       language: android
-      licenses:
-        - 'android-sdk-preview-license-.+'
-        - 'android-sdk-license-.+'
-        - 'google-gdk-license-.+'
+      jdk: oraclejdk8
       android:
+        licenses:
+          - 'android-sdk-preview-license-.+'
+          - 'android-sdk-license-.+'
+          - 'google-gdk-license-.+'
         components:
           - tools
           - platform-tools
-          - build-tools-25.0.3
-          - android-25
-          - sys-img-armeabi-v7a-google_apis-25
+          - tools
           - extra-android-m2repository
-          - extra-google-m2repository
-          - extra-google-android-support
-      jdk: oraclejdk8
       sudo: false
       addons:
         apt:
@@ -38,6 +34,10 @@ matrix:
             - ubuntu-toolchain-r-test # if we don't specify this, the libstdc++6 we get is the wrong version
           packages:
             - libstdc++6
+      before_install:
+        - touch $HOME/.android/repositories.cfg
+        - yes | sdkmanager "platforms;android-28"
+        - yes | sdkmanager "build-tools;28.0.3"
       before_script:
         - wget https://services.gradle.org/distributions/gradle-4.10.2-all.zip
         - unzip -qq gradle-4.10.2-all.zip
