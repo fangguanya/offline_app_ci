@@ -11,23 +11,6 @@ matrix:
     - env: JOB=IPA
 
   include:
-    # Runs unit tests without emulators.
-    - env: JOB=PR
-      os: linux
-      language: generic
-      sudo: false
-      addons:
-        apt:
-          # Flutter depends on /usr/lib/x86_64-linux-gnu/libstdc++.so.6 version GLIBCXX_3.4.18
-          sources:
-            - ubuntu-toolchain-r-test # if we don't specify this, the libstdc++6 we get is the wrong version
-          packages:
-            - libstdc++6
-      before_script:
-        - git clone https://github.com/flutter/flutter.git -b stable --depth 1
-      script:
-        - ./flutter/bin/flutter doctor
-
     # Builds an APK.
     - env: JOB=APK
       os: linux
@@ -62,6 +45,7 @@ matrix:
         - export PATH=$GRADLE_HOME/bin:$PATH
         - git clone https://github.com/flutter/flutter.git -b stable --depth 1
       script:
+        - ./flutter/bin/flutter doctor
         - ./flutter/bin/flutter -v build apk
 
     # Builds an IPA.
@@ -77,6 +61,7 @@ matrix:
         - brew install ios-deploy
         - git clone https://github.com/flutter/flutter.git -b stable --depth 1
       script:
+        - ./flutter/bin/flutter doctor
         - ./flutter/bin/flutter -v build ios --no-codesign
 
 cache:
